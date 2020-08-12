@@ -13,7 +13,7 @@ For now, DLWP is not a package that can be installed using `pip` or a `setup.py`
 #### Required dependencies
 
 It is assumed that the following are installed using Anaconda Python 3 (Python 2.7 should be supported, but not recommended). 
-I highly recommend creating a new environment, e.g., `conda create --name dlwp python=3.7 ipython`, and changing to that new environment.
+I highly recommend creating a new environment, e.g., `conda create --name dlwp python=3.7 ipython` or `conda create --name dlwp python=3.5 ipython` as pygrib works only on python 2.7, 3.4 and 3.5, and changing to that new environment.
 
 - [TensorFlow](https://www.tensorflow.org) >= 2.0 (GPU capable version highly recommended). 
 The `conda` package, while not the recommended installation method, is easy and also installs the required CUDA dependencies. 
@@ -40,6 +40,7 @@ Again the GPU-ready version is recommended.
 - scipy: for raw data interpolation
 - pygrib: for raw CFS data processing  
   `pip install pygrib`
+  `conda install -c conda-forge pygrib=2.0.1`
 - cdsapi: for retrieval of ERA5 data  
   `pip install cdsapi`
 - pyspharm: spherical harmonics transforms for the barotropic model  
